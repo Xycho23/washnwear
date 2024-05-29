@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Laundry System</h1>
+    <a href="{{ url_for('transactions') }}">View Transactions</a>
+    <form action="{{ url_for('add_transaction') }}" method="post">
+        <input type="text" name="value1" placeholder="Value 1">
+        <input type="text" name="value2" placeholder="Value 2">
+        <button type="submit">Add Transaction</button>
+    </form>
+</body>
+</html>
